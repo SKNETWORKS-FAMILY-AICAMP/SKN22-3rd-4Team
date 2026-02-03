@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
+    background: linear-gradient(180deg, #0a0e1a 0%, #121820 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+.header {
+    background-color: rgba(18, 24, 32, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    color: #00d4ff;
+}
+
+.logo-text {
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #00d4ff;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-button {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.icon-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-button:hover {
+    color: #00d4ff;
+}
+
+.login-button {
+    background-color: rgba(55, 65, 81, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.login-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.login-button:hover {
+    background-color: rgba(75, 85, 99, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content Styles */
+.main-content {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.hero-container {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* AI Badge */
+.ai-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border: 1px solid #00d4ff;
+    border-radius: 20px;
+    background-color: rgba(0, 212, 255, 0.05);
+    color: #00d4ff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.star-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Main Headline */
+.main-headline {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0;
+}
+
+.highlight {
+    color: #00d4ff;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 20px;
+    color: #94a3b8;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 1rem;
+}
+
+.search-box {
+    flex: 1;
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 50px;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    color: #64748b;
+    flex-shrink: 0;
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #64748b;
+}
+
+.analyze-button {
+    background-color: #00d4ff;
+    color: #000000;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    white-space: nowrap;
+}
+
+.analyze-button:hover {
+    background-color: #00b8cc;
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+}
+
+.arrow-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Popular Searches */
+.popular-searches {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.popular-label {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.tags-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 8px 18px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    border-color: #00d4ff;
+    color: #00d4ff;
+    background-color: rgba(0, 212, 255, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .main-headline {
+        font-size: 40px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .analyze-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .popular-searches {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ==========================================================================================
+   Streamlit Specific Overrides (Global)
+   - Radio Buttons as Tabs (Hidden Circles)
+   - Remove default borders
+   ========================================================================================== */
+
+/* Hide radio button circles globally */
+[data-testid="stRadio"]>div[role="radiogroup"]>label>div:first-child {
+    display: none !important;
+}
+
+/* Container styling - mimic tabs */
+[data-testid="stRadio"]>div[role="radiogroup"] {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-bottom: 2px solid #2d3748;
+    /* Darker border for dark theme */
+    background: transparent;
+}
+
+/* Remove default white line/border if present */
+div[role="radiogroup"] {
+    border: none !important;
+}
+
+/* Labels styling */
+[data-testid="stRadio"]>div[role="radiogroup"]>label {
+    background-color: transparent !important;
+    padding: 10px 20px !important;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-right: 0 !important;
+    transition: all 0.2s;
+    color: #a0aec0 !important;
+    /* Inactive color */
+}
+
+/* Hover effect */
+[data-testid="stRadio"]>div[role="radiogroup"]>label:hover {
+    color: #00d4ff !important;
+    border-bottom: 3px solid rgba(0, 212, 255, 0.5);
+}
+
+/* Selected state */
+[data-testid="stRadio"]>div[role="radiogroup"]>label[data-checked="true"] {
+    color: #00d4ff !important;
+    font-weight: bold;
+    border-bottom: 3px solid #00d4ff;
+}
+
+/* Text alignment fix */
+[data-testid="stRadio"] p {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar specific overrides (optional if needed differently) */
+section[data-testid="stSidebar"] [data-testid="stRadio"]>div[role="radiogroup"] {
+    flex-direction: column !important;
+    /* Sidebar keeps vertical layout */
+    border-bottom: none !important;
+    gap: 5px;
+}
+
+section[data-testid="stSidebar"] [data-testid="stRadio"]>div[role="radiogroup"]>label {
+    border-bottom: none !important;
+    border-left: 3px solid transparent;
+    padding: 10px 15px !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stRadio"]>div[role="radiogroup"]>label[data-checked="true"] {
+    border-bottom: none !important;
+    border-left: 3px solid #00d4ff;
+    background: linear-gradient(90deg, rgba(0, 212, 255, 0.1) 0%, transparent 100%);
+}
+
+section[data-testid="stSidebar"] [data-testid="stRadio"]>div[role="radiogroup"]>label:hover {
+    border-bottom: none !important;
+    border-left: 3px solid rgba(0, 212, 255, 0.5);
+}
+
+/* ==========================================================================================
+   Sidebar Watchlist Buttons - Center Text
+   ========================================================================================== */
+
+/* 사이드바 내 버튼 텍스트 가운데 정렬 */
+section[data-testid="stSidebar"] button[kind="secondary"],
+section[data-testid="stSidebar"] button[data-testid="baseButton-secondary"] {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+section[data-testid="stSidebar"] button[kind="secondary"] p,
+section[data-testid="stSidebar"] button[data-testid="baseButton-secondary"] p,
+section[data-testid="stSidebar"] button div[data-testid="stMarkdownContainer"],
+section[data-testid="stSidebar"] button div[data-testid="stMarkdownContainer"] p {
+    text-align: center !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* 버튼 내부 span, div 모든 요소 가운데 정렬 */
+section[data-testid="stSidebar"] .stButton button {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+section[data-testid="stSidebar"] .stButton button>div {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+}
