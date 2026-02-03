@@ -75,6 +75,48 @@ graph TD
 4. **Context Assembly**: 검색된 텍스트와 그래프 정보를 프롬프트로 구성
 5. **Generation**: LLM이 분석 결과 생성 및 답변 제공
 
+---
+
+## 🕸️ GraphRAG: 지능형 관계망 분석
+
+단순한 텍스트 검색(Vector RAG)을 넘어, 기업 간의 **공급망(Supply Chain), 경쟁 구도, 지배 구조**를 연결하여 입체적인 분석을 제공합니다.
+
+### GraphRAG 작동 원리 (Architecture)
+
+```mermaid
+graph TD
+    subgraph "1. 데이터 추출 (Ingestion)"
+        A[Original Text / 10-K] --> B{LLM 관계 추출}
+        B -- "추출" --> C(JSON: Source-Target-Relationship)
+        C -- "저장" --> D[(Supabase: company_relationships)]
+    end
+
+    subgraph "2. 네트워크 구축 (Graph Building)"
+        D --> E[NetworkX 로컬 그래프 생성]
+        E --> F[Nodes: 기업/브랜드]
+        E --> G[Edges: 파트너, 경쟁사, 자회사 등]
+    end
+
+    subgraph "3. 지능형 검색 (Query)"
+        H[사용자 질문: '애플의 공급망 분석'] --> I{그래프 탐색}
+        I --> J[1/2단계 인접 노드 탐색]
+        J --> K[중심성 분석 / 최단 경로 계산]
+        K --> L[그래프 컨텍스트 생성]
+    end
+
+    subgraph "4. 인사이트 생성"
+        L --> M{Analyst LLM}
+        M --> N[입체적 투자 인사이트 답변]
+    end
+```
+### 주요 기능
+
+- **관계망 추론**: 특정 기업의 악재가 공급망 내 어떤 기업에 파급될지 분석합니다.
+- **네트워크 위치 분석**: NetworkX의 `Centrality(중심성)` 알고리즘을 사용하여 시장 내 핵심 기업을 식별합니다.
+- **다차원 컨텍스트**: 벡터 검색 결과와 그래프 분석 결과를 결합하여 정보의 누락 없는 답변을 생성합니다.
+
+---
+
 ## 🛠️ 기술 스택 (Tech Stack)
 - **Language**: Python 3.10+
 - **Graph Library**: NetworkX
