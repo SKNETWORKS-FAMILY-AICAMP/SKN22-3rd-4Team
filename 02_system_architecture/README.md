@@ -5,6 +5,46 @@
 
 ## 🏗️ 전체 아키텍처
 
+```mermaid
+graph TD
+    User([👤 사용자]) -->|1. 접속| Login[🔐 로그인/회원가입]
+    Login -->|2. 인증 성공| UI[💻 Streamlit Web App]
+    
+    subgraph Frontend Logic
+        Login -->|Auth Request| Auth[🔐 Supabase Auth]
+        UI -->|Chat Query| Validator[🛡️ Input Validator]
+        UI -->|Report Request| ReportGen[📝 Report Generator]
+        UI -->|Manage Favorites| Watchlistmgr[⭐ Watchlist Manager]
+    end
+
+    subgraph Data & State
+        Auth <-->|Verify| UserDB[(👥 Users Table)]
+        Watchlistmgr <-->|Sync| UserDB
+    end
+
+    subgraph RAG Engine
+        Validator -->|Valid Query| Agent[🤖 LangChain Agent]
+        ReportGen -->|Data Fetch| Retriever[🔍 Data Retriever]
+        
+        Agent <-->|Vector Search| VectorDB[(🗄️ Supabase Vector)]
+        Agent <-->|Graph Search| GraphDB[(🕸️ GraphRAG)]
+        
+        Retriever -->|Parallel Fetch| VectorDB
+        Retriever -->|Parallel Fetch| GraphDB
+    end
+
+    subgraph Data Sources
+        Retriever -->|Live Price/News| Finnhub[📡 Finnhub API]
+        Retriever -->|Market Info| Yahoo[📈 yfinance API]
+        Retriever -->|Unknown Ticker| Tavily[🕵️ Tavily Search]
+        VectorDB <-->|Sync| SEC[📄 SEC 10-K/10-Q]
+    end
+
+    Retriever -->|Aggregated Context| LLM[🧠 GPT-4.1-mini]
+    Agent -->|Final Answer| LLM
+    LLM -->|Response| UI
+```
+
 ### 1. Frontend (User Interface)
 - **Framework**: Streamlit
 - **Features**: 
