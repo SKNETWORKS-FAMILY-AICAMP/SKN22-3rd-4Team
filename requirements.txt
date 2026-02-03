@@ -1,0 +1,48 @@
+# Core Framework
+streamlit>=1.31.0
+python-dotenv>=1.0.0
+extra-streamlit-components>=0.1.70
+streamlit-javascript>=0.1.5
+
+# LLM & AI
+openai>=1.12.0
+langchain>=0.1.9
+langchain-community>=0.0.24
+langchain-openai>=0.0.6
+mcp>=1.0.0
+
+# Graph
+networkx>=3.2.1
+
+# Database & SQL
+supabase>=2.3.0
+pandas>=2.2.0
+duckdb>=0.9.2
+sqlalchemy>=2.0.25
+
+# API & Web
+requests>=2.31.0
+beautifulsoup4>=4.12.3
+
+# Utilities
+pydantic>=2.6.1
+matplotlib>=3.8.2
+plotly>=5.18.0
+kaleido>=0.2.1
+reportlab>=4.0.0
+finnhub-python>=2.4.19
+yfinance>=0.2.36
+pytz>=2024.1
+APScheduler>=3.10.0
+lxml>=5.1.0
+tavily-python>=0.3.0
+streamlit-searchbox>=0.1.7
+pypdf>=4.0.0
+
+# Evaluation & RAG Advanced
+ragas>=0.0.22
+datasets
+rapidfuzz
+sentence-transformers
+rank_bm25
+tf-keras
