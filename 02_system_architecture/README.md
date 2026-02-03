@@ -37,7 +37,7 @@ graph TD
         Retriever -->|Live Price/News| Finnhub[📡 Finnhub API]
         Retriever -->|Market Info| Yahoo[📈 yfinance API]
         Retriever -->|Unknown Ticker| Tavily[🕵️ Tavily Search]
-        VectorDB <-->|Sync| SEC[📄 SEC 10-K/10-Q]
+        VectorDB <-->|Sync| SEC[📄 SEC 10-K]
     end
 
     Retriever -->|Aggregated Context| LLM[🧠 GPT-4.1-mini]
@@ -166,3 +166,4 @@ SKN22-3rd-4Team/
 ├── requirements.txt            # 의존성 패키지 목록
 └── STRUCTURE.md                # 프로젝트 구조 문서 (현재 파일)
 ```
+
