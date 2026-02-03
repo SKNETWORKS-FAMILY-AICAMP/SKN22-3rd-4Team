@@ -110,6 +110,18 @@ graph TD
 
 ---
 
+## 🛡️ 보안 및 안전성 (Security & Reliability)
+
+사용자 정보 보호와 시스템 무결성을 위해 **3단계 보안 레이어**를 구축하였습니다.
+
+- **Layer 1 (Gateway)**: 요청 속도 제한(Rate Limit) 및 반복 공격 세션 자동 차단.
+- **Layer 2 (Validator)**: 코드 레벨의 프롬프트 인젝션 패턴 탐지 및 입력 정제.
+- **Layer 3 (Guard)**: 시스템 프롬프트 하드닝(Hardening)을 통한 페르소나 이탈 방지.
+
+> [상세 보안 가이드 확인하기](./docs/SECURITY_SYSTEM.md)
+
+---
+
 ## 📚 기술 스택
 
 ![Python](https://img.shields.io/badge/Python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white)
@@ -262,7 +274,7 @@ TAVILY_API_KEY=...
 2. **지능형 웹 검색 (Agent Fallback)**: DB에 없는 키워드("액티비전" 등)가 입력되면, **Tavily Search API**를 활용한 에이전트가 실시간으로 웹을 검색합니다.
    - *"이 키워드를 만든 회사의 현재 상장 티커는 무엇인가?"*
    - *"혹시 인수합병(M&A)되었는가?"* (예: 액티비전 블리자드(ATVI) -> MSFT)
-3. **사용자 피드백 루프**: 시스템이 티커를 대체할 경우, UI에 **"이유(Reason)"** 를 명시하여 사용자의 혼란을 방지했습니다.
+3. **사용자 피드백 루프**: 시스템이 티커를 대체할 경우, UI에 **"이유(Reason)"**를 명시하여 사용자의 혼란을 방지했습니다.
 
 **결과 (Impact):**
 
@@ -291,4 +303,3 @@ Finnhub API는 무료 플랜에서는 일일 요청 횟수에 제한이 있습�
 MIT License
 
 ## 후기 (Review)
-
