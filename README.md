@@ -28,10 +28,11 @@
 
 ```mermaid
 graph TD
-    User([👤 사용자]) -->|Access| UI[💻 Streamlit Web App]
+    User([👤 사용자]) -->|1. 접속| Login[🔐 로그인/회원가입]
+    Login -->|2. 인증 성공| UI[💻 Streamlit Web App]
     
     subgraph Frontend Logic
-        UI -->|Login/Signup| Auth[🔐 Supabase Auth]
+        Login -->|Auth Request| Auth[🔐 Supabase Auth]
         UI -->|Chat Query| Validator[🛡️ Input Validator]
         UI -->|Report Request| ReportGen[📝 Report Generator]
         UI -->|Manage Favorites| Watchlistmgr[⭐ Watchlist Manager]
@@ -211,7 +212,7 @@ TAVILY_API_KEY=...
 2. **지능형 웹 검색 (Agent Fallback)**: DB에 없는 키워드("액티비전" 등)가 입력되면, **Tavily Search API**를 활용한 에이전트가 실시간으로 웹을 검색합니다.
    - *"이 키워드를 만든 회사의 현재 상장 티커는 무엇인가?"*
    - *"혹시 인수합병(M&A)되었는가?"* (예: 액티비전 블리자드(ATVI) -> MSFT)
-3. **사용자 피드백 루프**: 시스템이 티커를 대체할 경우, UI에 **"이유(Reason)"** 를 명시하여 사용자의 혼란을 방지했습니다.
+3. **사용자 피드백 루프**: 시스템이 티커를 대체할 경우, UI에 **"이유(Reason)"**를 명시하여 사용자의 혼란을 방지했습니다.
 
 **결과 (Impact):**
 - 정확하지 않은 티커로 인한 크래시 **<1%**
@@ -234,4 +235,3 @@ Finnhub API는 무료 플랜에서는 일일 요청 횟수에 제한이 있습�
 
 ## 📝 라이선스
 MIT License
-
