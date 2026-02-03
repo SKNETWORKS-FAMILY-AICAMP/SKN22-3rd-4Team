@@ -8,12 +8,12 @@
 
 ## 🙋‍♂️ 프로젝트 팀 구성 (Team Composition)
 
-| Role & Name | Responsibilities |
-| :--- | :--- |
-| **이병재 (Team Leader)**<br><sub>PM / ARCHITECTURE / DB</sub><br>[@PracLee](https://github.com/PracLee) | • 프로젝트 기획 및 전체 구조(Architecture) 설계<br>• 재무 데이터베이스(DB) 모델링 및 설계<br>• 챗봇 추천 검색어 로직 구현<br>• 단위/통합 테스트 주도 및 품질 관리 |
-| **장완식 (Core Dev)**<br><sub>RAG PIPELINE / UI/UX</sub><br>[@JangWS1030](https://github.com/JangWS1030) | • RAG 파이프라인(Chatbot) 핵심 로직 구현<br>• 로그인/인증 시스템 및 즐겨찾기 기능 개발<br>• DB 현황 모니터링 UI 및 PDF 리포트 수정<br>• 전반적인 UI/UX 개선 및 고도화 |
-| **안민제 (Feature Dev)**<br><sub>SEARCH / QA / DOCS / DB</sub><br>[@minje0209-ux](https://github.com/minje0209-ux) | • 챗봇 검색어 자동완성 알고리즘 구현<br>• 추천 검색어 기능 고도화<br>• ticker/keyword DB 설계<br>• 챗봇/리포트 작성 프롬프트 고도화<br>• README.md 작성 및 기술 문서화 |
-| **이신재 (Frontend / QA)**<br><sub>TESTING / UI REFINEMENT</sub><br>[@Codingcooker74](https://github.com/Codingcooker74) | • 주요 기능 단위 테스트(Unit Test) 수행<br>• 사용자 인터페이스(UI) 오류 수정 및 폴리싱<br>• 반응형 레이아웃 최적화 지원 |
+| Role & Name | Responsibilities | Comment |
+| :--- | :--- | :--- |
+| **이병재 (Team Leader)**<br><sub>PM / ARCHITECTURE / DB</sub><br>[@PracLee](https://github.com/PracLee) | • 프로젝트 기획 및 전체 구조(Architecture) 설계<br>• 재무 데이터베이스(DB) 모델링 및 설계<br>• 챗봇 추천 검색어 로직 구현<br>• 단위/통합 테스트 주도 및 품질 관리 | 단순히 프롬프트만 고치는 게 아니라 로직 밑바닥까지 직접 디버깅하며 RAG 성능을 50% 넘게 끌어올렸을 때, 진짜 엔지니어링의 재미를 느꼈습니다. |
+| **장완식 (Core Dev)**<br><sub>RAG PIPELINE / UI/UX</sub><br>[@JangWS1030](https://github.com/JangWS1030) | • RAG 파이프라인(Chatbot) 핵심 로직 구현<br>• 로그인/인증 시스템 및 즐겨찾기 기능 개발<br>• DB 현황 모니터링 UI 및 PDF 리포트 수정<br>• 전반적인 UI/UX 개선 및 고도화 | AI는 마법이 아니라 공학임을 깨닫고, 데이터 기반의 집요한 검증과 디버깅으로 성능 한계를 극복하며 엔지니어링의 본질을 체득했습니다 |
+| **안민제 (Feature Dev)**<br><sub>SEARCH / QA / DOCS / DB</sub><br>[@minje0209-ux](https://github.com/minje0209-ux) | • 챗봇 검색어 자동완성 알고리즘 구현<br>• 추천 검색어 기능 고도화<br>• ticker/keyword DB 설계<br>• 챗봇/리포트 작성 프롬프트 고도화<br>• README.md 작성 및 기술 문서화 | 스트림릿에 꽤 좋은 도구가 많더라구요! 재밌었어요. |
+| **이신재 (Frontend / QA)**<br><sub>TESTING / UI REFINEMENT</sub><br>[@Codingcooker74](https://github.com/Codingcooker74) | • 주요 기능 단위 테스트(Unit Test) 수행<br>• 사용자 인터페이스(UI) 오류 수정 및 폴리싱<br>• 반응형 레이아웃 최적화 지원 | 어려운 것을 척척해네는 팀원들이 대단해 보였습니다.^^ |
 
 ## 🖐️ 핵심 기능
 
@@ -235,3 +235,5 @@ Finnhub API는 무료 플랜에서는 일일 요청 횟수에 제한이 있습�
 
 ## 📝 라이선스
 MIT License
+
+## 후기 (Review)
